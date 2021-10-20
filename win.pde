@@ -1,14 +1,7 @@
-
 PImage win1; 
 void win() {
   win1 = loadImage("win.jpg");
   image(win1,700,450);
-      
-  
-  
-  
- 
-
   orbitron = createFont("Orbitron-VariableFont_wght.ttf", 100);
   textFont(orbitron);
   textAlign(CENTER);
@@ -28,5 +21,11 @@ void winClick() {
  
   mode = 0;
   SLive = 0;
-  
+  newA = 0;
+  myShip= new Ship();
+  myObjects = new ArrayList<GameObject>();
+
+  myObjects.add(new Asteroid());
+  myObjects.add(new Asteroid());
+  myObjects.add(new Asteroid());
 }

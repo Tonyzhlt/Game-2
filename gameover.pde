@@ -30,7 +30,14 @@ void gameover() {
 void gameoverClick() {
   mode = 0;
   SLive = 0;
+ newA = 0;
   TxSize = 0;
+  myShip= new Ship();
+  myObjects = new ArrayList<GameObject>();
+
+  myObjects.add(new Asteroid());
+  myObjects.add(new Asteroid());
+  myObjects.add(new Asteroid());
   
   
 }

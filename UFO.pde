@@ -29,6 +29,8 @@ class UFO extends GameObject{
   void act() {
     location.add(velocity);
     
+   
+    
     shotTimer++;
     if (shotTimer > threshold) {
       myObjects.add(new BulletUFO(location.x, location.y));
@@ -50,6 +52,27 @@ class UFO extends GameObject{
     
     if (velocity.mag() > 5) 
     velocity.setMag(5);
+    
+    
+     int u = 0;
+    while (u < myObjects.size() ) {
+      GameObject UFO = myObjects.get(u);
+      if (UFO instanceof Bullet) {
+
+
+        if (dist(location.x, location.y, UFO.location.x, UFO.location.y) <= size/2 + UFO.size) {
+          UFO.lives = 0;
+          lives = 0; 
+          int r = 0;
+          while (r<10) {
+            myObjects.add(new Particle(location, velocity));
+            r++;
+          }
+        }
+      }
+      u++;
+    }
+
     
     
   }

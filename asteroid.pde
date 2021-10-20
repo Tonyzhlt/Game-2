@@ -4,7 +4,7 @@ PFont orbitron;
 import processing.javafx.*;
 PImage universe;
 Ship myShip;
-boolean upkey, downkey, leftkey, rightkey, spacekey, fkey;
+boolean upkey, downkey, leftkey, rightkey, spacekey, Fkey;
 
 ArrayList < GameObject> myObjects;
 int mode;
@@ -94,7 +94,7 @@ void keyPressed() {
   if (keyCode == 'a'|| keyCode == 'A') leftkey = true;
   if (keyCode == 'd'|| keyCode == 'D') rightkey = true;
   if (keyCode == ' ') spacekey = true;
-  if (keyCode == 'f'|| keyCode == 'B') fkey = true;
+  if (keyCode == 'f'|| keyCode == 'F') Fkey = true;
 }
 
 void keyReleased() {
@@ -103,5 +103,5 @@ void keyReleased() {
   if (keyCode == 'a'|| keyCode == 'A') leftkey = false;
   if (keyCode == 'd'|| keyCode == 'D') rightkey = false;
   if (keyCode == ' ') spacekey = false;
-  if (keyCode == 'f'|| keyCode == 'F') fkey = false;
+  if (keyCode == 'f'|| keyCode == 'F') Fkey = false;
 }
